@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <PackageId>PureDepedencyInjection</PackageId>
+    <Authors>sugurusasaki</Authors>
+    <Company>Quad inc</Company>
+    <Product>Pure DI</Product>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+</Project>
