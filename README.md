@@ -21,7 +21,7 @@ public SampleClass(Dependency dependency, Palyad payload) {
 Of course this is also good, but in C # we use the Inject method.
 
 ```c#
-public void Inject(TargetDepedency dependency, TargetPayload payload) {
+public void Inject(IDepedencyType dependency, IPayloadType payload) {
 
 }
 ```
