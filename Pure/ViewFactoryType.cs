@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Pure
 {
-    public interface FactoryType
+    public interface ViewFactoryType
     {
         /// <summary>
         /// DIModuleオブジェクトを生成
