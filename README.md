@@ -8,8 +8,7 @@ This library is a port of Swift's Pure to C #.
 
 ## About Pure DI
 
-PureDI does not use the DI container. Usually Pure DI will use constructor injection.  
-
+PureDI does not use the DI container. Usually Pure DI will use constructor injection.
 
 ```c#
 // Constructor injection
@@ -25,6 +24,27 @@ public void Inject(IDepedencyType dependency, IPayloadType payload) {
 
 }
 ```
+
+Dependency injection is done by CompositionRoot.
+
+```c#
+public class CompositionRoot {
+    private CompositionRoot(Dependency dependency, Payload payload) {
+        this.dependency = dependency;
+        this.payload = payload;
+    }
+
+    public static CompositionRoot Resolve() {
+        var dependency = new Dependency();
+        var payload = new Payload();
+        return new CompositionRoot(dependency: dependency, payload: payload);
+    }
+}
+```
+
+
+
+
 
 
 ## Usage

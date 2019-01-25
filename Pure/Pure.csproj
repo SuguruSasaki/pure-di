@@ -6,9 +6,13 @@
     <Authors>sugurusasaki</Authors>
     <Company>Quad inc</Company>
     <Product>Pure DI</Product>
-    <Version>1.1.2</Version>
-    <AssemblyVersion>1.1.0.1</AssemblyVersion>
-    <FileVersion>1.1.0.1</FileVersion>
+    <Version>1.1.3</Version>
+    <AssemblyVersion>1.1.0.3</AssemblyVersion>
+    <FileVersion>1.1.0.3</FileVersion>
+    <RepositoryUrl>https://github.com/SuguruSasaki/pure-di</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/SuguruSasaki/pure-di</PackageProjectUrl>
+    <PackageTags>DipendencyInjection</PackageTags>
+    <Description>This library help you Dependency Injection pattern using Pure DI.</Description>
   </PropertyGroup>
 
 </Project>
