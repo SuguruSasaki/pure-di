@@ -2,7 +2,7 @@
 
 This library help you Dependency Injection pattern using Pure DI.  
 PureDI was proposed by [Mark Seemann](http://blog.ploeh.dk/2014/06/10/pure-di/).  
-[Jeon Suyeol](https://github.com/devxoul/Pure) made a very good library with Swift.
+[Jeon Suyeol](https://github.com/devxoul/Pure) made a great library with Swift.
   
 This library is a port of Swift's Pure to C #.
 
