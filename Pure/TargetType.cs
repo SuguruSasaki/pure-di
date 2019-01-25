@@ -4,21 +4,21 @@ using System.Text;
 
 namespace Pure
 {
-    public interface TargetType
+    public interface ITargetType
     {
         /// <summary>
         /// Inject Dependency and Payload parameters.
         /// </summary>
         /// <param name="dependency"></param>
         /// <param name="payload"></param>
-        void Inject(TargetDepedency dependency, TargetPayload payload);
+        void Inject(IDepedencyType dependency, IPayloadType payload);
     }
 
-    public interface TargetDepedency {
+    public interface IDepedencyType {
 
     }
 
-    public interface TargetPayload {
+    public interface IPayloadType {
 
     }
 }

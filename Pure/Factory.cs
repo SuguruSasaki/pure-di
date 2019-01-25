@@ -5,22 +5,22 @@ using System.Text;
 namespace Pure
 {
     public interface IFactory<T> {
-        T Create(TargetPayload payload);
+        T Create(IPayloadType payload);
     }
 
-    public class Factory<T>: IFactory<T> where T : TargetType, new() {
+    public class Factory<T>: IFactory<T> where T : ITargetType, new() {
 
         /// <summary>
         /// Create lazy function (using closure)
         /// </summary>
-        private Func<TargetDepedency> _dependencyClosure;
+        private Func<IDepedencyType> _dependencyClosure;
 
         /// <summary>
         /// Constructor
         /// inject closure function
         /// </summary>
         /// <param name="dependency">closure function</param>
-        public Factory(Func<TargetDepedency> dependency) {
+        public Factory(Func<IDepedencyType> dependency) {
             this._dependencyClosure = dependency;
         }
 
@@ -29,7 +29,7 @@ namespace Pure
         /// </summary>
         /// <param name="payload">payload parameters</param>
         /// <returns></returns>
-        public T Create(TargetPayload payload) {
+        public T Create(IPayloadType payload) {
             var newClass = new T();
             newClass.Inject(dependency: this._dependencyClosure(), payload: payload);
             return newClass;

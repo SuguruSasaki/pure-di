@@ -25,7 +25,7 @@ namespace Sample {
         public Payload payload;
 
         public IFactory<MainPageParam> MainPageFactory() {
-            Func<TargetDepedency> dependency = (() => {
+            Func<IDepedencyType> dependency = (() => {
                 return new MainPage.Dependency {
                     CalcFunc = new CalculatorA()  // new CalculatorB()
                 };

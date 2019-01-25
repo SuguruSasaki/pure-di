@@ -18,11 +18,11 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Sample.Scenes
 {
-    public struct MainPageParam: TargetType {
+    public struct MainPageParam: ITargetType {
         public MainPage.Dependency Dependency { get; set; }
         public MainPage.Payload Payload { get; set; }
 
-        public void Inject(TargetDepedency dependency, TargetPayload payload) {
+        public void Inject(IDepedencyType dependency, IPayloadType payload) {
             this.Dependency = (MainPage.Dependency)dependency;
             this.Payload = (MainPage.Payload)payload;
         }
@@ -30,11 +30,11 @@ namespace Sample.Scenes
 
     public sealed partial class MainPage : Page
     {
-        public struct Dependency: TargetDepedency {
+        public struct Dependency: IDepedencyType {
             public ICalculator CalcFunc;
         }
-
-        public struct Payload: TargetPayload {
+        
+        public struct Payload: IPayloadType {
             public string Name;
         }
        
