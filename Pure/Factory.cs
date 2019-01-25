@@ -8,7 +8,6 @@ namespace Pure
         T Create(TargetPayload payload);
     }
 
-
     public class Factory<T>: IFactory<T> where T : TargetType, new() {
 
         /// <summary>

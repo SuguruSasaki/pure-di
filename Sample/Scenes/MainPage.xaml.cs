@@ -19,8 +19,8 @@ using Windows.UI.Xaml.Navigation;
 namespace Sample.Scenes
 {
     public struct MainPageParam: TargetType {
-        public MainPage.Dependency Dependency;
-        public MainPage.Payload Payload;
+        public MainPage.Dependency Dependency { get; set; }
+        public MainPage.Payload Payload { get; set; }
 
         public void Inject(TargetDepedency dependency, TargetPayload payload) {
             this.Dependency = (MainPage.Dependency)dependency;
