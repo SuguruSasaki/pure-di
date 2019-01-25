@@ -18,6 +18,15 @@ public SampleClass(Dependency dependency, Palyad payload) {
 }
 ```
 
+Of course this is also good, but in C # we use the Inject method.
+
+```
+public void Inject(TargetDepedency dependency, TargetPayload payload) {
+
+}
+```
+
+
 ## Usage
 
 
