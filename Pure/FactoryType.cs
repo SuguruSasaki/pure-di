@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Pure
 {
-    public interface DIFactoryType
+    public interface FactoryType
     {
         /// <summary>
         /// DIModuleオブジェクトを生成
         /// </summary>
         /// <param name="payload">Payloadオブジェクト</param>
         /// <returns></returns>
-        Module Create(Module.Payload payload);
+        ViewModel Create(ViewModel.Payload payload);
     }
 }

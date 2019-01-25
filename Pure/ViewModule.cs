@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Pure
 {
-    public class Module
+    public class ViewModel
     {
         /// <summary>
         /// 依存オブジェクト
