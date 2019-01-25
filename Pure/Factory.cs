@@ -5,33 +5,33 @@ using System.Text;
 namespace Pure
 {
     public interface IFactory<T> {
-
         T Create(TargetPayload payload);
     }
 
 
-    public class Factory<Class>: IFactory<Class> where Class : TargetType, new() {
+    public class Factory<T>: IFactory<T> where T : TargetType, new() {
 
         /// <summary>
-        /// 遅延実行するためにラムダ式で保持する
+        /// Create lazy function (using closure)
         /// </summary>
         private Func<TargetDepedency> _dependencyClosure;
 
         /// <summary>
-        /// コンストラクタでラムダ関数を注入
+        /// Constructor
+        /// inject closure function
         /// </summary>
-        /// <param name="dependency">依存オブジェクトを生成するラムダ関数</param>
+        /// <param name="dependency">closure function</param>
         public Factory(Func<TargetDepedency> dependency) {
             this._dependencyClosure = dependency;
         }
 
         /// <summary>s
-        /// インスタンス生成、依存性の注入を実行
+        /// create object
         /// </summary>
-        /// <param name="payload">インスタンスに渡すパラメータ</param>
+        /// <param name="payload">payload parameters</param>
         /// <returns></returns>
-        public Class Create(TargetPayload payload) {
-            var newClass = new Class();
+        public T Create(TargetPayload payload) {
+            var newClass = new T();
             newClass.Inject(dependency: this._dependencyClosure(), payload: payload);
             return newClass;
         }

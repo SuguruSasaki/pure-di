@@ -26,7 +26,9 @@ namespace Sample {
 
         public IFactory<MainPageParam> MainPageFactory() {
             Func<TargetDepedency> dependency = (() => {
-                return new MainPage.Dependency();
+                return new MainPage.Dependency {
+                    CalcFunc = new CalculatorA()  // new CalculatorB()
+                };
             });
             return new Factory<MainPageParam>(dependency: dependency);
         }
@@ -46,7 +48,6 @@ namespace Sample {
         /// </summary>
         /// <returns></returns>
         public static CompositionRoot Resolve() {
-
             var dependency = new Dependency();
             var payload = new Payload();
 

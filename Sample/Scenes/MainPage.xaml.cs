@@ -31,15 +31,12 @@ namespace Sample.Scenes
     public sealed partial class MainPage : Page
     {
         public struct Dependency: TargetDepedency {
-
+            public ICalculator CalcFunc;
         }
 
         public struct Payload: TargetPayload {
             public string Name;
         }
-
-        private Dependency _dependency;
-        private Payload _payload;
        
         public MainPage()
         {
@@ -48,13 +45,10 @@ namespace Sample.Scenes
 
         protected override void OnNavigatedTo(NavigationEventArgs e) {
             base.OnNavigatedTo(e);
-
             var param = (MainPageParam)e.Parameter;
 
             Debug.WriteLine(param.Payload.Name.ToString());
-
+            Debug.WriteLine(param.Dependency.CalcFunc.Calc(10, 20));
         }
-
-        
     }
 }

@@ -6,6 +6,11 @@ namespace Pure
 {
     public interface TargetType
     {
+        /// <summary>
+        /// Inject Dependency and Payload parameters.
+        /// </summary>
+        /// <param name="dependency"></param>
+        /// <param name="payload"></param>
         void Inject(TargetDepedency dependency, TargetPayload payload);
     }
 

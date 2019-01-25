@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="App\CompositionRoot.cs" />
+    <Compile Include="Scenes\Calculator.cs" />
     <Compile Include="Scenes\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
