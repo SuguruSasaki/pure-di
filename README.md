@@ -11,7 +11,7 @@ This library is a port of Swift's Pure to C #.
 PureDI does not use the DI container. Usually Pure DI will use constructor injection.  
 
 
-```
+```c#
 // Constructor injection
 public SampleClass(Dependency dependency, Palyad payload) {
 
@@ -20,7 +20,7 @@ public SampleClass(Dependency dependency, Palyad payload) {
 
 Of course this is also good, but in C # we use the Inject method.
 
-```
+```c#
 public void Inject(TargetDepedency dependency, TargetPayload payload) {
 
 }
