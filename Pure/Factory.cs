@@ -8,7 +8,7 @@ namespace Pure
         T Create(IPayloadType payload);
     }
 
-    public class Factory<T>: IFactory<T> where T : ITargetType, new() {
+    public sealed class Factory<T>: IFactory<T> where T : ITargetType, new() {
 
         /// <summary>
         /// Create lazy function (using closure)

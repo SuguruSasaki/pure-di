@@ -25,7 +25,7 @@ public void Inject(IDepedencyType dependency, IPayloadType payload) {
 }
 ```
 
-Dependency injection is done by CompositionRoot.
+Dependency injection is done by Composition Root. This idea is very powerful.
 
 ```c#
 public class CompositionRoot {
@@ -41,11 +41,6 @@ public class CompositionRoot {
     }
 }
 ```
-
-
-
-
-
 
 ## Usage
 

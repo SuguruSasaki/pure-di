@@ -45,22 +45,22 @@ namespace PureUnitTestProject {
 
 
     // Test用クラス
-    class SampleModule : Module {
+    class SampleModule : ITargetType {
 
-        public new class Dependency: Module.Dependency {
+        public struct Dependency: IDepedencyType {
             public string Title;
         }
 
-        public new class Payload: Module.Payload {
+        public struct Payload: IPayloadType {
             public string Name;
         };
 
         public Dependency InstanceOfdependency;
         public Payload InstanceOfpayload;
 
-        public override void Inject(Module.Dependency dependency, Module.Payload payload) {
-            this.InstanceOfdependency = dependency as Dependency;
-            this.InstanceOfpayload = payload as Payload;
+        public void Inject(IDepedencyType dependency, IPayloadType payload) {
+            this.InstanceOfdependency = (Dependency)dependency;
+            this.InstanceOfpayload = (Payload)payload;
         }
     }
 }
